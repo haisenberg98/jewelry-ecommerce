@@ -16,8 +16,8 @@ module.exports = {
         customDark: '#1a1a1a',
       },
       fontFamily: {
-        customHeader: ['Noto Serif Vithkuqi', 'serif'],
-        customText: ['Noto Serif Vithkuqi', 'serif'],
+        customPrimary: ['Noto Serif Vithkuqi', 'serif'],
+        customSecondary: ['Futura PT', 'serif'],
       },
     },
   },

@@ -9,7 +9,7 @@ function Home() {
           {/* year */}
           <span className='mb-10'>2023</span>
           {/* fine collection */}
-          <div className='mb-16'>
+          <div className='mb-20'>
             <h1 className='md:text-4xl text-4xl lg:text-6xl break-words'>
               Fine jewelry collection
             </h1>
@@ -23,7 +23,7 @@ function Home() {
         {/* featured items 2 cols */}
         <div className='flex flex-col'>
           {/* item 1 */}
-          <img src='./public/image' alt='' srcset='' />
+          <img src='/images/1.png' alt='image 1' />
           {/* item 2 */}
         </div>
 

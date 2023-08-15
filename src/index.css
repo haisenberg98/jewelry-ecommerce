@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Vithkuqi&display=swap');
-
+@font-face {
+  font-family: 'Futura PT';
+  src: url('/public/fonts/FuturaPTBook.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
-html {
-  @apply text-customDark;
-}
 
 .hamburger-toggler {
   z-index: 50;
@@ -77,8 +78,7 @@ html {
   width: 0%;
   height: 100vh;
 
-  /* applyin transition on the menu */
-
+  /* applying transition on the menu */
   transition: all 0.4s ease;
 }
 
@@ -99,9 +99,16 @@ html {
   visibility: visible;
 }
 
+/* base style alter */
 @layer base {
+  html {
+    @apply text-customDark font-customSecondary;
+  }
   h1,
   h2 {
-    @apply text-xl text-customDark font-customHeader uppercase font-semibold tracking-wider;
+    @apply text-xl text-customDark font-customPrimary uppercase font-semibold tracking-wider;
+  }
+  a {
+    @apply transition-all duration-150 hover:text-customLightGray;
   }
 }
