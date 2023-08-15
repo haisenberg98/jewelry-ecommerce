@@ -11,13 +11,14 @@ html {
   z-index: 50;
   height: 48px;
   width: 48px;
-  opacity: 1;
-  @apply top-0 left-0 cursor-pointer absolute;
+  opacity: 0;
+
+  @apply -top-2 left-0 cursor-pointer absolute flex justify-center;
 }
 
 .hamburger-lines {
   z-index: 60;
-  @apply h-12 w-12 top-0 left-0 absolute cursor-pointer flex items-center justify-center;
+  @apply h-12 w-12 top-4 left-0 cursor-pointer absolute flex justify-center;
 }
 
 /* THE MIDDLE LINE OF THE HAMBURGER : */
@@ -79,6 +80,16 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   /* APPLYING TRANSITION TO THE MENU :  */
 
   transition: all 0.4s ease;
+}
+
+.mobile-menu-item {
+  visibility: hidden;
+}
+
+.open.mobile-menu .mobile-menu-item {
+  transition: visibility 0.4s ease;
+  transition-delay: 0.1s;
+  visibility: visible;
 }
 
 /* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 30% , CREATING A SMOOTH EFFECT :  */
