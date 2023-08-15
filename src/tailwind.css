@@ -13,16 +13,16 @@ html {
   width: 48px;
   opacity: 0;
 
-  @apply -top-2 left-0 cursor-pointer absolute flex justify-center;
+  @apply top-0 left-0 cursor-pointer absolute;
 }
 
 .hamburger-lines {
-  z-index: 60;
-  @apply h-12 w-12 top-4 left-0 cursor-pointer absolute flex justify-center;
+  @apply h-12 w-12 cursor-pointer flex justify-center items-center;
 }
 
-/* THE MIDDLE LINE OF THE HAMBURGER : */
+/* middle */
 .hamburger-lines > div {
+  z-index: 60;
   position: relative;
   top: 0;
   left: 0;
