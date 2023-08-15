@@ -85,11 +85,13 @@ function Header() {
       <div
         className={`${isOpen ? 'open' : ''} mobile-menu flex justify-center`}
       >
-        <nav className='mobile-menu-item flex flex-col space-y-4 mt-24'>
-          <Link href='/'>Home</Link>
-          <Link href='/products'>Products</Link>
-          <Link href='/about'>About</Link>
-          <Link href='/contact'>Contact</Link>
+        <nav className='mobile-menu-item flex flex-col space-y-4 uppercase mt-24 text-center'>
+          <Link href='/'>Earrings</Link>
+          <Link href='/'>Rings</Link>
+          <Link href='/'>Bracelets</Link>
+          <Link href='/'>Fine jewelry</Link>
+          <Link href='/'>Bundles</Link>
+          <Link href='/'>More Collections</Link>
         </nav>
       </div>
     </div>
