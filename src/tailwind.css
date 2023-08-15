@@ -32,8 +32,7 @@ html {
   @apply bg-customDark;
 }
 
-/* CREATING THE TOP AND BOTTOM LINES : 
-TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
+/* top and bottom lines */
 .hamburger-lines > div::before,
 .hamburger-lines > div::after {
   content: '';
@@ -51,7 +50,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   @apply bg-customDark;
 }
 
-/* IF THE TOGGLER IS IN ITS CHECKED STATE, THEN SETTING THE BACKGROUND OF THE MIDDLE LAYER TO COMPLETE BLACK AND OPAQUE :  */
+/* top and middle lines  */
 
 .open.hamburger-lines > div {
   background: rgba(0, 0, 0, 0);
@@ -62,7 +61,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   transform: rotate(45deg);
 }
 
-/* AND ROTATING THE TOP AND BOTTOM LINES :  */
+/* rotating bottom line  */
 
 .open.hamburger-lines > div::after {
   top: 0;
@@ -77,25 +76,26 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   width: 0%;
   height: 100vh;
 
-  /* APPLYING TRANSITION TO THE MENU :  */
+  /* applyin transition on the menu */
 
   transition: all 0.4s ease;
 }
 
+/* when toggled */
+.open.mobile-menu {
+  width: 100%;
+}
+
+/* hide mobile menu item */
 .mobile-menu-item {
   visibility: hidden;
 }
 
+/* show mobile menu item */
 .open.mobile-menu .mobile-menu-item {
   transition: visibility 0.4s ease;
   transition-delay: 0.1s;
   visibility: visible;
-}
-
-/* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 30% , CREATING A SMOOTH EFFECT :  */
-
-.open.mobile-menu {
-  width: 100%;
 }
 
 @layer base {
