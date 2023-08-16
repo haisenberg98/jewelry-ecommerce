@@ -7,7 +7,6 @@ import image3 from '../assets/images/9.jpg';
 function Home() {
   return (
     <>
-      {console.log(process.env.PUBLIC_URL)}
       <Hero />
       <NewProduct />
     </>
