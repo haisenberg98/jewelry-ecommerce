@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <Routes basename='/denny-mini-projects'>
+      <Routes basename='/jewelry-ecommerce'>
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
         {/* <Route path='/product/:id' element={<ProductDetail />} /> */}
