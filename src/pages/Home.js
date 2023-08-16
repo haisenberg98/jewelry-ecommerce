@@ -1,5 +1,8 @@
 import React from 'react';
 import Button from '../components/global/Button';
+import image1 from '../assets/images/5.png';
+import image2 from '../assets/images/6.png';
+import image3 from '../assets/images/9.jpg';
 
 function Home() {
   return (
@@ -22,9 +25,7 @@ function NewProduct() {
             our new jewelry designs.
           </p>
         </div>
-        <div className='flex items-center'>
-          <span>slider</span>
-        </div>
+        <div className='flex items-center'>{/* <span>slider</span> */}</div>
       </div>
       {/* new product list */}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'></div>
@@ -54,24 +55,20 @@ function Hero() {
         {/* item 1 */}
         <img
           className='object-contain h-60 bg-customWhite'
-          src={'/images/6.png'}
+          src={image1}
           alt='1'
         />
         {/* item 2 */}
         <img
           className='object-contain h-60 bg-customWhite'
-          src={'/images/5.png'}
+          src={image2}
           alt='2'
         />
       </div>
 
       {/* featured items big */}
       <div className='hidden lg:flex justify-center items-center col-span-1 md:col-span-2 lg:col-span-1 bg-customWhite'>
-        <img
-          className='lg:object-contain h-[490px]'
-          src={'/images/9.jpg'}
-          alt='3'
-        />
+        <img className='lg:object-contain h-[490px]' src={image3} alt='3' />
       </div>
     </div>
   );
