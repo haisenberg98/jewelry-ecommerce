@@ -23,6 +23,8 @@
     "watch:css": "postcss src/tailwind.css -o src/index.css --watch",
     "start": "concurrently \"npm run watch:css\" \"react-scripts start\"",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,5 +44,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://haisenberg98.github.io/jewelry-ecommerce"
 }
