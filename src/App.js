@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/jewelry-ecommerce' element={<Home />} />
-        <Route path='/products' element={<Products />} />
+        <Route path='/jewelry-ecommerce/products' element={<Products />} />
         {/* <Route path='/product/:id' element={<ProductDetail />} /> */}
         {/* Other routes */}
       </Routes>
