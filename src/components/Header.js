@@ -10,7 +10,7 @@ import {
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <section id='header' className='relative'>
+    <div className='relative'>
       <header className='relative py-3 px-6 border-b-[1.5px] border-b-customDark flex md:flex-col'>
         {/* mobile-menu toggler, logo, sign in and cart */}
         <div className='w-full flex justify-between items-center relative'>
@@ -94,7 +94,7 @@ function Header() {
           <Link href='/'>More Collections</Link>
         </nav>
       </div>
-    </section>
+    </div>
   );
 }
 

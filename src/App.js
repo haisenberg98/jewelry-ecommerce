@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <Routes basename='/jewelry-ecommerce'>
+      <Routes basename={process.env.PUBLIC_URL}>
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
         {/* <Route path='/product/:id' element={<ProductDetail />} /> */}
