@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/jewelry-ecommerce/static/css/main.2caea6be.css",
-    "main.js": "/jewelry-ecommerce/static/js/main.749dcb67.js",
+    "main.js": "/jewelry-ecommerce/static/js/main.fce7934c.js",
     "static/js/787.37b16c2a.chunk.js": "/jewelry-ecommerce/static/js/787.37b16c2a.chunk.js",
     "static/media/FuturaPTBook.otf": "/jewelry-ecommerce/static/media/FuturaPTBook.bc305be0a88a100ad836.otf",
     "index.html": "/jewelry-ecommerce/index.html",
     "main.2caea6be.css.map": "/jewelry-ecommerce/static/css/main.2caea6be.css.map",
-    "main.749dcb67.js.map": "/jewelry-ecommerce/static/js/main.749dcb67.js.map",
+    "main.fce7934c.js.map": "/jewelry-ecommerce/static/js/main.fce7934c.js.map",
     "787.37b16c2a.chunk.js.map": "/jewelry-ecommerce/static/js/787.37b16c2a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2caea6be.css",
-    "static/js/main.749dcb67.js"
+    "static/js/main.fce7934c.js"
   ]
 }
