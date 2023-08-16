@@ -9,9 +9,9 @@ function App() {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route path='/jewelry-ecommerce' element={<Home />} />
-        <Route path='/jewelry-ecommerce/products' element={<Products />} />
+      <Routes basename='/denny-mini-projects'>
+        <Route path='/' element={<Home />} />
+        <Route path='/products' element={<Products />} />
         {/* <Route path='/product/:id' element={<ProductDetail />} /> */}
         {/* Other routes */}
       </Routes>
