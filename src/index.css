@@ -19,7 +19,7 @@
 }
 
 .hamburger-lines {
-  @apply h-12 w-12 cursor-pointer flex justify-center items-center;
+  @apply h-12 w-12 cursor-pointer flex items-center;
 }
 
 /* middle */

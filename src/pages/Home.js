@@ -16,7 +16,7 @@ function Home() {
 function NewProduct() {
   return (
     <div className='flex flex-col p-4'>
-      <div className='flex justify-between mt-10 '>
+      <div className='flex justify-between mt-10'>
         <div className='flex w-full md:flex-row'>
           <h2 className='mr-20'>New in</h2>
           <p className='max-w-xs break-words'>
@@ -34,14 +34,14 @@ function NewProduct() {
 
 function Hero() {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-4'>
+    <div className='grid grid-cols-1 gap-3 p-4 md:grid-cols-2 lg:grid-cols-3'>
       {/* fine collection */}
       <div className='flex flex-col p-4 text-customDarkGray bg-customWhite justify-between max-h-[400px]'>
         {/* year */}
         <span className='mb-10'>2023</span>
         {/* fine collection */}
         <div className='mb-20'>
-          <h1 className='text-3xl md:text-4xl xl:text-5xl break-words'>
+          <h1 className='text-3xl break-words md:text-4xl xl:text-5xl '>
             Fine jewelry collection
           </h1>
         </div>
@@ -50,7 +50,7 @@ function Hero() {
       </div>
 
       {/* featured items 2 cols */}
-      <div className='hidden md:flex flex-col gap-3 md:max-h-36 lg:max-h-[195px]'>
+      <div className='hidden flex-col gap-3 md:flex md:max-h-36 lg:max-h-[195px]'>
         {/* item 1 */}
         <img
           className='object-contain bg-customWhite max-h-full'
@@ -66,7 +66,7 @@ function Hero() {
       </div>
 
       {/* featured items big */}
-      <div className='hidden max-h-[400px] lg:flex justify-center items-center col-span-1 md:col-span-2 lg:col-span-1 bg-customWhite'>
+      <div className='hidden max-h-[400px] justify-center items-center col-span-1 md:col-span-2 lg:flex lg:col-span-1 bg-customWhite'>
         <img className='lg:object-contain max-h-full' src={image3} alt='3' />
       </div>
     </div>
