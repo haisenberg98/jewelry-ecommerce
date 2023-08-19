@@ -6,19 +6,18 @@ import image3 from '../assets/images/9.jpg';
 
 function Home() {
   return (
-    <>
+    <section id='main' className=''>
       <Hero />
       <NewProduct />
-    </>
+    </section>
   );
 }
 
 function NewProduct() {
   return (
-    // new in
     <div className='flex flex-col p-4'>
       <div className='flex justify-between mt-10 '>
-        <div className='flex w-full md:flex-row  '>
+        <div className='flex w-full md:flex-row'>
           <h2 className='mr-20'>New in</h2>
           <p className='max-w-xs break-words'>
             Just arrived from the atelier, discover the latest arrivals, explore
@@ -37,12 +36,12 @@ function Hero() {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-4'>
       {/* fine collection */}
-      <div className='flex flex-col p-4 text-customDarkGray bg-customWhite justify-between'>
+      <div className='flex flex-col p-4 text-customDarkGray bg-customWhite justify-between max-h-[400px]'>
         {/* year */}
         <span className='mb-10'>2023</span>
         {/* fine collection */}
         <div className='mb-20'>
-          <h1 className='md:text-4xl text-4xl lg:text-6xl break-words'>
+          <h1 className='text-3xl md:text-4xl xl:text-5xl break-words'>
             Fine jewelry collection
           </h1>
         </div>
@@ -51,24 +50,24 @@ function Hero() {
       </div>
 
       {/* featured items 2 cols */}
-      <div className='hidden md:flex flex-col gap-3'>
+      <div className='hidden md:flex flex-col gap-3 md:max-h-36 lg:max-h-[195px]'>
         {/* item 1 */}
         <img
-          className='object-contain h-60 bg-customWhite'
+          className='object-contain bg-customWhite max-h-full'
           src={image1}
           alt='1'
         />
         {/* item 2 */}
         <img
-          className='object-contain h-60 bg-customWhite'
+          className='object-contain bg-customWhite max-h-full'
           src={image2}
           alt='2'
         />
       </div>
 
       {/* featured items big */}
-      <div className='hidden lg:flex justify-center items-center col-span-1 md:col-span-2 lg:col-span-1 bg-customWhite'>
-        <img className='lg:object-contain h-[490px]' src={image3} alt='3' />
+      <div className='hidden max-h-[400px] lg:flex justify-center items-center col-span-1 md:col-span-2 lg:col-span-1 bg-customWhite'>
+        <img className='lg:object-contain max-h-full' src={image3} alt='3' />
       </div>
     </div>
   );

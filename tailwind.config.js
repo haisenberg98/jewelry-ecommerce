@@ -20,7 +20,7 @@ module.exports = {
         customSecondary: ['Futura PT', 'serif'],
       },
       fontSize: {
-        '6xl': [
+        '5xl': [
           '3.75rem',
           {
             lineHeight: '4.5rem',
