@@ -19,7 +19,7 @@
 }
 
 .hamburger-lines {
-  @apply h-12 w-12 cursor-pointer flex items-center;
+  @apply h-12 w-12 cursor-pointer flex justify-center items-center;
 }
 
 /* middle */
@@ -97,6 +97,29 @@
   transition: visibility 0.4s ease;
   transition-delay: 0.1s;
   visibility: visible;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* base style alter */

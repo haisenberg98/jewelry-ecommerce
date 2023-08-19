@@ -4,12 +4,54 @@ import image1 from '../assets/images/5.png';
 import image2 from '../assets/images/6.png';
 import image3 from '../assets/images/9.jpg';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules';
+
 function Home() {
   return (
-    <section id='main' className=''>
+    <main>
       <Hero />
       <NewProduct />
-    </section>
+    </main>
+  );
+}
+
+function Slider() {
+  return (
+    <>
+      <Swiper
+        pagination={{
+          el: '.page',
+          type: 'custom',
+          renderCustom: function (swiper, current, total) {
+            return current + '/' + total;
+          },
+        }}
+        navigation={{
+          prevEl: '.prev',
+          nextEl: '.next',
+        }}
+        modules={[Pagination, Navigation]}
+        className='mySwiper'
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
+    </>
   );
 }
 
@@ -24,10 +66,17 @@ function NewProduct() {
             our new jewelry designs.
           </p>
         </div>
-        <div className='flex items-center'>{/* <span>slider</span> */}</div>
+        {/* slider button */}
+        <div className='flex items-center'>
+          <div className='prev'>Prev</div>
+          <div className='page'></div>
+          <div className='next'>Next</div>
+        </div>
       </div>
       {/* new product list */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'></div>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
+        <Slider />
+      </div>
     </div>
   );
 }
@@ -65,7 +114,7 @@ function Hero() {
         />
       </div>
 
-      {/* featured items big */}
+      {/* featured item big */}
       <div className='hidden max-h-[400px] justify-center items-center col-span-1 md:col-span-2 lg:flex lg:col-span-1 bg-customWhite'>
         <img className='lg:object-contain max-h-full' src={image3} alt='3' />
       </div>
