@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../components/global/Button';
+import Product from '../components/global/Product';
 import image1 from '../assets/images/5.png';
 import image2 from '../assets/images/6.png';
 import image3 from '../assets/images/9.jpg';
@@ -19,8 +20,6 @@ function Slider() {
   return (
     <>
       <Swiper
-        slidesPerView={4}
-        spaceBetween={30}
         pagination={{
           el: '.swiper-page',
           type: 'custom',
@@ -32,18 +31,55 @@ function Slider() {
           prevEl: '.swiper-prev',
           nextEl: '.swiper-next',
         }}
+        breakpoints={{
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+          1536: {
+            //XL
+            slidesPerView: 6,
+            spaceBetween: 10,
+          },
+        }}
         modules={[Pagination, Navigation]}
         className='swiper-slider'
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+          <Product image={image3} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Product image={image3} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Product image={image3} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Product image={image3} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Product image={image3} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Product image={image3} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Product image={image3} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Product image={image3} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Product image={image3} />
+        </SwiperSlide>
       </Swiper>
     </>
   );
@@ -62,18 +98,18 @@ function NewProduct() {
           </p>
         </div>
         {/* slider button */}
-        <div className='flex items-center space-x-2'>
+        <div className='hidden lg:flex items-center space-x-2'>
           <button className='swiper-prev swiper-custom-navigation'>
             <FontAwesomeIcon icon={faCaretLeft} className='w-3 h-3' />
           </button>
-          <div className='swiper-page cursor-not-allowed'></div>
+          <div className='swiper-page cursor-pointer'></div>
           <button className='swiper-next swiper-custom-navigation'>
             <FontAwesomeIcon icon={faCaretRight} className='w-3 h-3' />
           </button>
         </div>
       </div>
       {/* new product list */}
-      <div className='flex border-2 mt-10'>
+      <div className='flex mt-10'>
         <Slider />
       </div>
     </div>
@@ -89,7 +125,7 @@ function Hero() {
         <span className='mb-10'>2023</span>
         {/* fine collection */}
         <div className='mb-20'>
-          <h1 className='text-3xl break-words md:text-4xl xl:text-5xl '>
+          <h1 className='text-3xl break-words xl:text-4xl 2xl:text-5xl'>
             Fine jewelry collection
           </h1>
         </div>

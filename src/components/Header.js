@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 //FontAwesome
@@ -11,6 +11,30 @@ import {
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    // Function to handle window resize
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    // Add event listener to window resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <header className='relative'>
       <div className='relative py-3 px-6 border-b-[1.5px] border-b-customDark flex md:flex-col'>
@@ -96,6 +120,12 @@ function Header() {
           <Link href='/'>Bundles</Link>
           <Link href='/'>More Collections</Link>
         </nav>
+      </div>
+
+      {/* responsive */}
+      <div className='flex fixed justify-center text-lg text-customDark top-0 bg-customWhite w-full'>
+        <p>Width: {windowSize.width}px</p>
+        <p>Height: {windowSize.height}px</p>
       </div>
     </header>
   );
