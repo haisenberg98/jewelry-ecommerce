@@ -112,8 +112,9 @@
   align-items: center;
 }
 
-.swiper-custom-navigation.swiper-button-disabled {
-  @apply border-customLightGray;
+.swiper-custom-navigation.swiper-button-disabled,
+.swiper-custom-navigation.swiper-button-disabled:hover {
+  @apply border-customLightGray text-customLightGray bg-white;
 }
 
 .swiper-custom-navigation {
