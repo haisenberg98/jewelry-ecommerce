@@ -4,42 +4,36 @@ import image1 from '../assets/images/5.png';
 import image2 from '../assets/images/6.png';
 import image3 from '../assets/images/9.jpg';
 
+//FontAwesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
+
+//Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
+// Import Swiper style
 import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
-
-function Home() {
-  return (
-    <main>
-      <Hero />
-      <NewProduct />
-    </main>
-  );
-}
 
 function Slider() {
   return (
     <>
       <Swiper
+        slidesPerView={4}
+        spaceBetween={30}
         pagination={{
-          el: '.page',
+          el: '.swiper-page',
           type: 'custom',
           renderCustom: function (swiper, current, total) {
             return current + '/' + total;
           },
         }}
         navigation={{
-          prevEl: '.prev',
-          nextEl: '.next',
+          prevEl: '.swiper-prev',
+          nextEl: '.swiper-next',
         }}
         modules={[Pagination, Navigation]}
-        className='mySwiper'
+        className='swiper-slider'
       >
         <SwiperSlide>Slide 1</SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
@@ -59,22 +53,27 @@ function NewProduct() {
   return (
     <div className='flex flex-col p-4'>
       <div className='flex justify-between mt-10'>
-        <div className='flex w-full md:flex-row'>
-          <h2 className='mr-20'>New in</h2>
+        {/* new in */}
+        <div className='flex w-full space-x-10 md:flex-row'>
+          <h2>New in</h2>
           <p className='max-w-xs break-words'>
             Just arrived from the atelier, discover the latest arrivals, explore
             our new jewelry designs.
           </p>
         </div>
         {/* slider button */}
-        <div className='flex items-center'>
-          <div className='prev'>Prev</div>
-          <div className='page'></div>
-          <div className='next'>Next</div>
+        <div className='flex items-center space-x-2'>
+          <button className='swiper-prev swiper-custom-navigation'>
+            <FontAwesomeIcon icon={faCaretLeft} className='w-3 h-3' />
+          </button>
+          <div className='swiper-page cursor-not-allowed'></div>
+          <button className='swiper-next swiper-custom-navigation'>
+            <FontAwesomeIcon icon={faCaretRight} className='w-3 h-3' />
+          </button>
         </div>
       </div>
       {/* new product list */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
+      <div className='flex border-2 mt-10'>
         <Slider />
       </div>
     </div>
@@ -119,6 +118,15 @@ function Hero() {
         <img className='lg:object-contain max-h-full' src={image3} alt='3' />
       </div>
     </div>
+  );
+}
+
+function Home() {
+  return (
+    <main>
+      <Hero />
+      <NewProduct />
+    </main>
   );
 }
 

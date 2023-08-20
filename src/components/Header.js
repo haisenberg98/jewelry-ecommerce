@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+//FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCartShopping,

@@ -10,12 +10,10 @@
 @import 'tailwindcss/utilities';
 
 .hamburger-toggler {
-  z-index: 50;
   height: 48px;
   width: 48px;
-  opacity: 0;
 
-  @apply top-0 left-0 cursor-pointer absolute;
+  @apply top-0 left-0 cursor-pointer absolute opacity-0 z-50;
 }
 
 .hamburger-lines {
@@ -53,7 +51,6 @@
 }
 
 /* top and middle lines  */
-
 .open.hamburger-lines > div {
   background: rgba(0, 0, 0, 0);
 }
@@ -64,7 +61,6 @@
 }
 
 /* rotating bottom line  */
-
 .open.hamburger-lines > div::after {
   top: 0;
   transform: rotate(135deg);
@@ -99,6 +95,7 @@
   visibility: visible;
 }
 
+/* Swiper */
 .swiper {
   width: 100%;
   height: 100%;
@@ -115,11 +112,16 @@
   align-items: center;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.swiper-custom-navigation.swiper-button-disabled {
+  @apply border-customLightGray;
+}
+
+.swiper-custom-navigation {
+  @apply flex border transition-all duration-200 border-customDark rounded-full w-6 h-6 justify-center items-center;
+}
+
+.swiper-custom-navigation:hover {
+  @apply text-customWhite bg-customDark;
 }
 
 /* base style alter */
