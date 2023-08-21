@@ -2,7 +2,7 @@ import React from 'react';
 
 function Button({ variant, children, onClick }) {
   // Determine the button style based on the variant prop
-  let buttonStyle = ' border-[1.5px] transition-all duration-200';
+  let buttonStyle = 'border-[1.5px] transition-all duration-200';
 
   switch (variant) {
     case 'primary':

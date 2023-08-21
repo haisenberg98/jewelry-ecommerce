@@ -1,89 +1,10 @@
 import React from 'react';
 import Button from '../components/global/Button';
-import Product from '../components/global/Product';
+import ProductSlider from '../components/global/ProductSlider';
+import SliderButton from '../components/global/SliderButton';
 import image1 from '../assets/images/5.png';
 import image2 from '../assets/images/6.png';
 import image3 from '../assets/images/9.jpg';
-
-//FontAwesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
-
-//Swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper style
-import 'swiper/css';
-// import required modules
-import { Pagination, Navigation } from 'swiper/modules';
-
-function Slider() {
-  return (
-    <>
-      <Swiper
-        pagination={{
-          el: '.swiper-page',
-          type: 'custom',
-          renderCustom: function (swiper, current, total) {
-            return current + '/' + total;
-          },
-        }}
-        navigation={{
-          prevEl: '.swiper-prev',
-          nextEl: '.swiper-next',
-        }}
-        breakpoints={{
-          480: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-          },
-          1536: {
-            //XL
-            slidesPerView: 6,
-            spaceBetween: 10,
-          },
-        }}
-        modules={[Pagination, Navigation]}
-        className='swiper-slider'
-      >
-        <SwiperSlide>
-          <Product image={image3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product image={image3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product image={image3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product image={image3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product image={image3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product image={image3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product image={image3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product image={image3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product image={image3} />
-        </SwiperSlide>
-      </Swiper>
-    </>
-  );
-}
 
 function NewProduct() {
   return (
@@ -98,19 +19,13 @@ function NewProduct() {
           </p>
         </div>
         {/* slider button */}
-        <div className='hidden lg:flex items-center space-x-2'>
-          <button className='swiper-prev swiper-custom-navigation'>
-            <FontAwesomeIcon icon={faCaretLeft} className='w-3 h-3' />
-          </button>
-          <div className='swiper-page cursor-pointer'></div>
-          <button className='swiper-next swiper-custom-navigation'>
-            <FontAwesomeIcon icon={faCaretRight} className='w-3 h-3' />
-          </button>
+        <div className='hidden lg:flex items-end space-x-2'>
+          <SliderButton />
         </div>
       </div>
       {/* new product list */}
       <div className='flex mt-10'>
-        <Slider />
+        <ProductSlider />
       </div>
     </div>
   );
