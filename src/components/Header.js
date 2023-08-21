@@ -51,6 +51,7 @@ function Header() {
               onClick={() => setIsOpen(!isOpen)}
               className={`hamburger-lines ${isOpen ? 'open' : ''}`}
             >
+              {/* inside the hamburger */}
               <div></div>
             </div>
           </div>
@@ -123,7 +124,7 @@ function Header() {
       </div>
 
       {/* responsive */}
-      <div className='hidden md:flex fixed justify-center text-lg text-customDark top-0 bg-customWhite w-full'>
+      <div className='hidden md:flex fixed justify-center text-lg text-customDark bottom-0 z-50 bg-customWhite w-full'>
         <p>Width: {windowSize.width}px</p>
         <p>Height: {windowSize.height}px</p>
       </div>

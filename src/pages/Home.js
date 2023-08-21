@@ -11,8 +11,8 @@ function NewProduct() {
     <div className='flex flex-col p-4'>
       <div className='flex justify-between mt-10'>
         {/* new in */}
-        <div className='flex w-full justify-between items-end md:flex-row lg:space-x-10 lg:justify-start'>
-          <h2 className='text-sm md:text-2xl'>New in</h2>
+        <div className='flex w-full justify-between items-end lg:space-x-10 lg:justify-start'>
+          <h2 className='text-lg md:text-2xl'>New in</h2>
           <p className='text-right max-w-xs break-words lg:text-left'>
             Just arrived from the atelier, discover the latest arrivals, explore
             our new jewelry designs.
