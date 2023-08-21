@@ -123,7 +123,7 @@ function Header() {
       </div>
 
       {/* responsive */}
-      <div className='flex fixed justify-center text-lg text-customDark top-0 bg-customWhite w-full'>
+      <div className='hidden md:flex fixed justify-center text-lg text-customDark top-0 bg-customWhite w-full'>
         <p>Width: {windowSize.width}px</p>
         <p>Height: {windowSize.height}px</p>
       </div>
