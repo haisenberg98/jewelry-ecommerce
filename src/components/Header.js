@@ -10,12 +10,28 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
+  //Hamburger menu :
   const [isOpen, setIsOpen] = useState(false);
-
+  //Scroll control when menu opened :
+  const [isScrollDisabled, setIsScrollDisabled] = useState(false);
+  //Window size
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
+
+  const handleHamburgerMenuClick = () => {
+    setIsOpen(!isOpen);
+
+    //disable the scroll bar when mobile menu opened
+    if (isScrollDisabled) {
+      document.body.style.overflow = 'auto';
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
+
+    setIsScrollDisabled(!isScrollDisabled);
+  };
 
   useEffect(() => {
     // Function to handle window resize
@@ -44,11 +60,11 @@ function Header() {
           <div className='lg:hidden'>
             <input
               type='checkbox'
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={handleHamburgerMenuClick}
               className='hamburger-toggler'
             />
             <div
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={handleHamburgerMenuClick}
               className={`hamburger-lines ${isOpen ? 'open' : ''}`}
             >
               {/* inside the hamburger */}
