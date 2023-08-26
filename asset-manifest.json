@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jewelry-ecommerce/static/css/main.6800bced.css",
-    "main.js": "/jewelry-ecommerce/static/js/main.50aa1c10.js",
+    "main.css": "/jewelry-ecommerce/static/css/main.7f9c383c.css",
+    "main.js": "/jewelry-ecommerce/static/js/main.51de1e4a.js",
     "static/js/787.37b16c2a.chunk.js": "/jewelry-ecommerce/static/js/787.37b16c2a.chunk.js",
     "static/media/2.jpg": "/jewelry-ecommerce/static/media/2.7c66d0199db3a95a399d.jpg",
     "static/media/7.jpg": "/jewelry-ecommerce/static/media/7.24b3d0997d155b2e987d.jpg",
@@ -14,12 +14,12 @@
     "static/media/6.jpg": "/jewelry-ecommerce/static/media/6.7e06dcd2052c09ff075e.jpg",
     "static/media/1.jpg": "/jewelry-ecommerce/static/media/1.60f4e6c238ef1d95862e.jpg",
     "index.html": "/jewelry-ecommerce/index.html",
-    "main.6800bced.css.map": "/jewelry-ecommerce/static/css/main.6800bced.css.map",
-    "main.50aa1c10.js.map": "/jewelry-ecommerce/static/js/main.50aa1c10.js.map",
+    "main.7f9c383c.css.map": "/jewelry-ecommerce/static/css/main.7f9c383c.css.map",
+    "main.51de1e4a.js.map": "/jewelry-ecommerce/static/js/main.51de1e4a.js.map",
     "787.37b16c2a.chunk.js.map": "/jewelry-ecommerce/static/js/787.37b16c2a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6800bced.css",
-    "static/js/main.50aa1c10.js"
+    "static/css/main.7f9c383c.css",
+    "static/js/main.51de1e4a.js"
   ]
 }
