@@ -33,23 +33,33 @@ function Header() {
     setIsScrollDisabled(!isScrollDisabled);
   };
 
-  useEffect(() => {
-    // Function to handle window resize
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
+  // Function to handle window resize
+  const handleResize = () => {
+    setWindowSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  };
 
-    // Add event listener to window resize
+  const disableScroll = e => e.preventDefault();
+
+  useEffect(() => {
+    //disable scroll on mobile when hamburger menu triggered
+    if (isScrollDisabled) {
+      document.addEventListener('touchmove', disableScroll, { passive: false });
+    } else {
+      document.removeEventListener('touchmove', disableScroll);
+    }
+
+    //window resize event
     window.addEventListener('resize', handleResize);
 
     // Clean up event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
+      document.removeEventListener('touchmove', disableScroll);
     };
-  }, []);
+  }, [isScrollDisabled]);
 
   return (
     <header className='relative'>
