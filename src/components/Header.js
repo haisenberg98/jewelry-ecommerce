@@ -14,13 +14,16 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   //Scroll control when menu opened :
   const [isScrollDisabled, setIsScrollDisabled] = useState(false);
+
   //Window size
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
 
+  //handle hamburger menu click
   const handleHamburgerMenuClick = () => {
+    //set menu mobile open/close
     setIsOpen(!isOpen);
 
     //disable the scroll bar when mobile menu opened
@@ -29,7 +32,6 @@ function Header() {
     } else {
       document.body.style.overflow = 'hidden';
     }
-
     setIsScrollDisabled(!isScrollDisabled);
   };
 
@@ -44,7 +46,7 @@ function Header() {
   const disableScroll = e => e.preventDefault();
 
   useEffect(() => {
-    //disable scroll/touchmove on mobile when hamburger menu triggered
+    //document touchmove event on scroll disabled
     if (isScrollDisabled) {
       document.addEventListener('touchmove', disableScroll, { passive: false });
     } else {
@@ -54,9 +56,11 @@ function Header() {
     //window resize event
     window.addEventListener('resize', handleResize);
 
-    // Clean up event listener on component unmount
+    // clean up event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
+
+      //touchmove on mobile when hamburger menu triggered
       document.removeEventListener('touchmove', disableScroll);
     };
   }, [isScrollDisabled]);
