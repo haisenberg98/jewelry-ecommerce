@@ -44,7 +44,7 @@ function Header() {
   const disableScroll = e => e.preventDefault();
 
   useEffect(() => {
-    //disable scroll on mobile when hamburger menu triggered
+    //disable scroll/touchmove on mobile when hamburger menu triggered
     if (isScrollDisabled) {
       document.addEventListener('touchmove', disableScroll, { passive: false });
     } else {
