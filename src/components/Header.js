@@ -58,9 +58,10 @@ function Header() {
 
     // clean up event listener on component unmount
     return () => {
+      //remove resize event
       window.removeEventListener('resize', handleResize);
 
-      //touchmove on mobile when hamburger menu triggered
+      //remove touchmove event
       document.removeEventListener('touchmove', disableScroll);
     };
   }, [isScrollDisabled]);
