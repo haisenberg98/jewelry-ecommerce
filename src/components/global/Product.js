@@ -9,6 +9,10 @@ const formatter = new Intl.NumberFormat('en-NZ', {
   currency: 'NZD',
 });
 
+const formatPrice = price => {
+  return formatter.format(price);
+};
+
 function Product({
   variant,
   image,
@@ -43,14 +47,15 @@ function Product({
             {onSale ? (
               <>
                 <span>
-                  {formatter.format(price - (price * discountRate) / 100)}
+                  {/* Discounted Price */}
+                  {formatPrice(price - (price * discountRate) / 100)}
                 </span>{' '}
                 <span className='text-customLightGray line-through'>
-                  {formatter.format(price)}
+                  {formatPrice(price)}
                 </span>
               </>
             ) : (
-              <span>{formatter.format(price)}</span>
+              <span>{formatPrice(price)}</span>
             )}
           </h3>
         </div>
