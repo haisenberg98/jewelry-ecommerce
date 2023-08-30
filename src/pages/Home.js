@@ -133,7 +133,7 @@ function NewProduct() {
       </div>
 
       <div className='mt-10 flex justify-end border-b-[1.5px] border-b-customLightGray'>
-        <h3>Show All New Jewelry</h3>
+        <h4>Show All New Jewelry</h4>
       </div>
     </div>
   );

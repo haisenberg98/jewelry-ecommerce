@@ -135,7 +135,7 @@
   h2 {
     @apply text-xl text-customDark font-customPrimary uppercase font-semibold tracking-wider;
   }
-  h3 {
+  h4 {
     @apply text-customDarkGray;
   }
   a {
